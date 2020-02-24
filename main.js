@@ -8,7 +8,7 @@ router.get('/',function(req,res){
   res.json({"error" : false, "message" : "Hello World!"});
 });
 router.post('/add',function(req,res){
-  res.json({"error" : false, "message" : "success", "data" : req.body.num1 + req.body.num2});
+  res.json({"error" : false, "message" : "success", "data" :  parseInt(parseInt(req.body.num1) + parseInt(req.body.num2))});
 });
 app.use('/',router);
 app.listen(80,function(){
