@@ -1,9 +1,10 @@
-FROM node:14
-ADD main.js ./
-ADD package.json ./
+FROM fnproject/node:dev as build-stage
+WORKDIR /function
+ADD package.json /function/
 RUN npm install
-# set maintainer
-LABEL maintainer "ashish.denny.p@oracle.com"
-
-EXPOSE 80
-CMD [ "npm", "start" ]
+FROM fnproject/node
+WORKDIR /function
+ADD . /function/
+COPY --from=build-stage /function/node_modules/ /function/node_modules/
+RUN chmod -R o+r /function
+ENTRYPOINT ["node", "main.js"]
