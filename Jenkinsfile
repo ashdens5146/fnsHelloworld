@@ -1,18 +1,18 @@
 pipeline {
     agent {label 'jenkinslaves' }
     stages {
-        stage('Fetch dependencies') {
+        /*  stage('Fetch dependencies') {
         /* This stage pulls the latest nginx image from
            Dockerhub */
-            steps {
-                sh 'sudo docker pull node:14'
+          /*   steps {
+              /*   sh 'sudo docker pull node:14'
           }
-        }
+        } */
         stage('Build docker image') {
         /* This stage builds the actual image; synonymous to
            docker build on the command line */
             steps {
-            sh "sudo docker build . -t nodeapp:1"
+            sh "sudo docker build . -t nodehello:1"
             }    
         }
         stage('Test image') {
@@ -27,9 +27,9 @@ pipeline {
             docker image to our OCI private Registry*/
         steps {
             sh "sudo docker login -u 'sehubjapacprod/appdevuser' -p ')7K>}EU}6sTnNn2]qYt)' iad.ocir.io"
-            sh "sudo docker tag nodeapp:1 iad.ocir.io/sehubjapacprod/nodeapp:custom"
+            sh "sudo docker tag nodehello:1 iad.ocir.io/sehubjapacprod/nodehello:custom"
             sh "sudo docker images"
-            sh "sudo docker push iad.ocir.io/sehubjapacprod/nodeapp:custom"
+            sh "sudo docker push iad.ocir.io/sehubjapacprod/nodehello:custom"
             
            }
          }      
