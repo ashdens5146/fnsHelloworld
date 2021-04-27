@@ -26,10 +26,10 @@ pipeline {
          /* Final stage of build; Push the 
             docker image to our OCI private Registry*/
         steps {
-            sh "sudo docker login -u 'sehubjapacprod/appdevuser' -p ')7K>}EU}6sTnNn2]qYt)' iad.ocir.io"
-            sh "sudo docker tag nodehello:1 iad.ocir.io/sehubjapacprod/nodehello:custom"
+            sh "sudo docker login -u 'sehubjapacprod/appdevuser' -p ')7K>}EU}6sTnNn2]qYt)' mel.ocir.io"
+            sh "sudo docker tag nodehello:1 mel.ocir.io/sehubjapacprod/nodehello:custom"
             sh "sudo docker images"
-            sh "sudo docker push iad.ocir.io/sehubjapacprod/nodehello:custom"
+            sh "sudo docker push mel.ocir.io/sehubjapacprod/nodehello:custom"
             
            }
          }      
