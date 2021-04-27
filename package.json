@@ -1,11 +1,11 @@
 {
-  "name": "NodeJSMicro",
-  "version": "0.0.1",
-  "scripts": {
-    "start": "node main.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
- }
+        "name": "hellofn",
+    "version": "1.0.0",
+        "description": "example function",
+        "main": "func.js",
+        "author": "",
+        "license": "Apache-2.0",
+        "dependencies": {
+                "@fnproject/fdk": ">=0.0.20"
+        }
 }
