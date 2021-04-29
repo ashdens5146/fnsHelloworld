@@ -1,7 +1,7 @@
 const fdk=require('@fnproject/fdk');
 
 fdk.handle(function(input){
-  let name = 'World';
+  let name = 'Sehub';
   if (input.name) {
     name = input.name;
   }
