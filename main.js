@@ -1,7 +1,7 @@
 const fdk=require('@fnproject/fdk');
 
 fdk.handle(function(input){
-  let name = 'Ashish Sam';
+  let name = 'Ashish is the Best Developer';
   if (input.name) {
     name = input.name;
   }
