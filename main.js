@@ -6,5 +6,6 @@ fdk.handle(function(input){
     name = input.name;
   }
   console.log('\nInside Node Hello World function')
-  return {'message': 'Hello ' + name}
+  //return {'message': 'Hello ' + name}
+  return { 'userId': 1, 'id': 1,'title': 'delectus aut autem','completed': false }
 })
