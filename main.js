@@ -7,5 +7,5 @@ fdk.handle(function(input){
   }
   console.log('\nInside Node Hello World function')
   //return {'message': 'Hello ' + name}
-  return { 'userId': 1, 'id': 1,'title': 'Inkit Demo','completed': false }
+  return { 'userId': 1, 'id': 1,'title': 'Functions and Jenkins Demo','completed': false }
 })
