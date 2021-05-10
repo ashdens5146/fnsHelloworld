@@ -27,9 +27,9 @@ pipeline {
             docker image to our OCI private Registry*/
         steps {
             sh "sudo docker login -u 'sehubjapacprod/appdevuser' -p ')7K>}EU}6sTnNn2]qYt)' mel.ocir.io"
-            sh "sudo docker tag nodehello:1 mel.ocir.io/sehubjapacprod/nodehello:v1.6.0"
+            sh "sudo docker tag nodehello:1 mel.ocir.io/sehubjapacprod/nodehello:v1.7.0"
             sh "sudo docker images"
-            sh "sudo docker push mel.ocir.io/sehubjapacprod/nodehello:v1.6.0"
+            sh "sudo docker push mel.ocir.io/sehubjapacprod/nodehello:v1.7.0"
             
            }
          }      
